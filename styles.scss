@@ -1,0 +1,72 @@
+/***************UNIVERSAL*****************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  //scrollbar-width: none;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+i {
+  pointer-events: none;
+}
+/***************GENERAL*****************/
+// Splitting the sections and allowing dual scroll
+.left-right {
+  max-width: 50%;
+  width: 50%;
+  height: 100vh;
+  float: left;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+// Each App General Styling
+.app,
+.home {
+  height: 100vh;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+/***************RELAXATION MODE*****************/
+//relax
+.relax {
+  background: #c26767;
+}
+//RPS
+#rps {
+  background: #92a1c9;
+}
+
+//catJump
+#cat-jump {
+  background: #49435e;
+}
+
+//MINESWEEPER
+#mine {
+  background: #879789;
+}
+/***************FOCUS MODE*****************/
+//focus
+.focus {
+  background: #2e2e2e;
+}
+//todo
+#todo {
+  background: rgb(255, 250, 234);
+}
+
+// pomodoro
+#pomodoro {
+  background: #ffad8e;
+}
+
+//countdown
+#countdown {
+  background: #fedc8d;
+}

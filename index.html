@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make This Your Home</title>
+    <link rel="icon" href="/images/spider.ico" />
+    <link rel="stylesheet" href="" />
+    <!-- Font-Awesome Used for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.min.css"
+      integrity="sha512-QfDd74mlg8afgSqm3Vq2Q65e9b3xMhJB4GZ9OcHDVy1hZ6pqBJPWWnMsKDXM7NINoKqJANNGBuVRIpIJ5dogfA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Open Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Section to seperate screen vertically later using CSS, left side-->
+      <section class="left-right">
+        <!-- Home Section for Relax Mode
+                Contains the three app buttons as links -->
+        <section class="home relax">
+          <h2>Relaxation Mode</h2>
+          <div class="app-icons-line">
+            <div class="app-button-box">
+              <a href="#rps" class="white-circle">
+                <img
+                  src="./images/rock-paper-scissors.png"
+                  alt="Rock Paper Scissors Icon"
+                />
+              </a>
+              <h3>rps</h3>
+            </div>
+            <div class="app-button-box">
+              <a href="#cat-jump" class="white-circle">
+                <img src="./images/Cat-07-300x300.png" alt="Cat Jump Icon" />
+              </a>
+              <h3>cat jump</h3>
+            </div>
+            <div class="app-button-box">
+              <a href="#mine" class="white-circle">
+                <img src="./images/grenade.png" alt="Minesweeper Icon" />
+              </a>
+              <h3>minesweeper</h3>
+            </div>
+          </div>
+          <img
+            src="./images/undraw_old_day_-6-x25.png"
+            alt="man playing on arcade game"
+          />
+        </section>
+
+        <!-- rock paper scissors -->
+        <section class="app" id="rps">
+          <h2>rock paper scissors</h2>
+          <details class="info">
+            <summary><i class="fas fa-info-circle"></i></summary>
+            <p>
+              Get ready for a vicious battle of rock paper scissors with your
+              pc!
+              <br />
+              Simply pick your hand, Rock, Paper or Scissors and you'll what the
+              mighty PC has picked. <br />
+              If you're not aware of what tramps what, refer to the table below!
+              <br />
+            </p>
+            <table>
+              <tr>
+                <th>Player 1</th>
+                <th>PC Player</th>
+                <th>Winner</th>
+              </tr>
+              <tr>
+                <td>Rock</td>
+                <td>Paper</td>
+                <td>Paper</td>
+              </tr>
+              <tr>
+                <td>Paper</td>
+                <td>Scissors</td>
+                <td>Scissors</td>
+              </tr>
+              <tr>
+                <td>Scissors</td>
+                <td>Rock</td>
+                <td>Rock</td>
+              </tr>
+            </table>
+            <p>
+              If both of you play the same hand, it's a tie! Now go ahead and
+              start playing!
+            </p>
+          </details>
+          <div class="scoreboard">
+            <div class="score" id="pc-score">
+              <h3>PC</h3>
+              <h2>0</h2>
+            </div>
+            <div class="score" id="you-score">
+              <h3>YOU</h3>
+              <h2>0</h2>
+            </div>
+          </div>
+          <div class="rps-play-area" id="rock">
+            <div class="app-button-box">
+              <button type="button" class="hand" value="rock">
+                <i class="fas fa-hand-rock"></i>
+              </button>
+              <p>rock</p>
+            </div>
+            <div class="app-button-box" id="paper">
+              <button type="button" class="hand" value="paper">
+                <i class="fas fa-hand-paper"></i>
+              </button>
+              <p>paper</p>
+            </div>
+            <div class="app-button-box">
+              <button type="button" class="hand" value="scissors">
+                <i class="fas fa-hand-scissors"></i>
+              </button>
+              <p>scissors</p>
+            </div>
+          </div>
+          <div class="rps-stats">
+            <p>PC PLAYED: <span id="pc-played">R/P/S</span></p>
+            <p>YOU PLAYED: <span id="you-played">R/P/S</span></p>
+            <h2 id="winner-text">X WINS 🏆</h2>
+            <button class="default-button" id="rps-reset">RESET</button>
+          </div>
+        </section>
+
+        <!-- cat jump -->
+        <section class="app" id="cat-jump">
+          <h2>cat jump</h2>
+          <details class="info">
+            <summary><i class="fas fa-info-circle"></i></summary>
+            <p>
+              WATCH OUT! Don't trip over those trash cans! <br />
+              You don't want your cat coming home smelling gross. <br />
+              Let's see how far you can get along by pressing space to jump and
+              set a new personal best! Press <strong>SPACEBAR</strong> to start!
+            </p>
+          </details>
+          <div class="scoreboard">
+            <div class="score" id="cat-score">
+              <h3>HIGHSCORE</h3>
+              <h2>0</h2>
+            </div>
+          </div>
+          <div class="cat-play-area">
+            <i class="fas fa-cat" id="cat"></i>
+            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-trash-alt"></i>
+            <hr />
+          </div>
+          <div class="cat-stats">
+            <p>SCORE: <span id="current-cat-score">0</span></p>
+            <button class="default-button" id="cat-play">PLAY</button>
+          </div>
+        </section>
+
+        <!-- minesweeper -->
+        <section class="app" id="mine">
+          <h2>minesweeper</h2>
+          <details class="info">
+            <summary><i class="fas fa-info-circle"></i></summary>
+            <p>
+              Click away on the boxes, but step carefully, you might run into a
+              💣! <br />
+              LEFT CLICK to reveal whats underneath. <br />
+              RIGHT CLICK to put a flag where you think the bombs are.
+            </p>
+          </details>
+          <div class="scoreboard">
+            <div class="score" id="mine-score">
+              <h3>HIGHSCORE</h3>
+              <h2>0</h2>
+            </div>
+          </div>
+          <div class="mine-play-area"></div>
+          <div class="mine-stats">
+            <button class="default-button" id="mine-play">PLAY</button>
+          </div>
+        </section>
+      </section>
+
+      <!-- Section to seperate screen vertically later using CSS, right side-->
+      <section class="left-right">
+        <!-- Home Section for Focus Mode
+                Contains the three app buttons as links -->
+        <section class="home focus">
+          <h2>Focus Mode</h2>
+          <div class="app-icons-line">
+            <div class="app-button">
+              <a href="#todo" class="white-circle">
+                <img src="./images/list.png" alt="todo list Icon" />
+              </a>
+              <h3>to-do list</h3>
+            </div>
+            <div class="app-button">
+              <a href="#pomodoro" class="white-circle">
+                <img src="./images/184540.png" alt="Pomodoro Icon" />
+              </a>
+              <h3>pomodoro</h3>
+            </div>
+            <div class="app-button">
+              <a href="#countdown" class="white-circle">
+                <img src="./images/calendar-icon.png" alt="Countdown Icon" />
+              </a>
+              <h3>countdown</h3>
+            </div>
+          </div>
+          <img
+            src="./images/undraw_road_to_knowledge_m8s0.png"
+            alt="man climbing books"
+          />
+        </section>
+
+        <!-- todo list -->
+        <section class="app" id="todo">
+          <h2>to-do list</h2>
+          <details class="info">
+            <summary><i class="fas fa-info-circle"></i></summary>
+            <p>
+              Let's get things sorted! List all the tasks you need to do and
+              cross them off as you finish them! <br />
+            </p>
+          </details>
+          <div class="todo-container">
+            <form>
+              <input type="text" class="todo-input" />
+              <button class="todo-button" type="submit">
+                <i class="fa fa-plus-square"></i>
+              </button>
+              <div class="select">
+                <select name="todos" class="filter-todo">
+                  <option value="all">All</option>
+                  <option value="completed">Completed</option>
+                  <option value="uncompleted">Uncompleted</option>
+                </select>
+              </div>
+            </form>
+            <ul class="todo-list">
+              <li>
+                Add CSS
+                <button><i class="fas fa-check"></i></button>
+                <button><i class="fas fa-trash"></i></button>
+              </li>
+              <li>
+                Add JS
+                <button><i class="fas fa-check"></i></button>
+                <button><i class="fas fa-trash"></i></button>
+              </li>
+              <li>
+                Clean up
+                <button><i class="fas fa-check"></i></button>
+                <button><i class="fas fa-trash"></i></button>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- pomodoro timer -->
+        <section class="app" id="pomodoro">
+          <h2>pomodoro</h2>
+          <details class="info">
+            <summary><i class="fas fa-info-circle"></i></summary>
+            <p>
+              A pomodoro timer is used to do work and take breaks in a way that
+              helps keep you motivated.<br />
+              The most common interval is 25 minutes of work followed by a 5
+              minute break. <br />
+              Afer completing 4 sessions of work, you take a 25 minute break and
+              then repeat the whole process. <br />
+              Feel free to change the intervals using the settings button below.
+              Let's get working!
+            </p>
+          </details>
+          <div class="pom-timer-block">
+            <h2 class="timer" id="pom-timer">25:00</h2>
+          </div>
+          <div class="pom-stats">
+            <button class="default-button">START</button>
+            <table>
+              <tr>
+                <td>FOCUS PERIOD</td>
+                <td>25 min</td>
+              </tr>
+              <tr>
+                <td>SHORT BREAK</td>
+                <td>05 min</td>
+              </tr>
+              <tr>
+                <td>LONG BREAK</td>
+                <td>25 min</td>
+              </tr>
+              <tr>
+                <td>SESSION</td>
+                <td>1/4</td>
+              </tr>
+            </table>
+            <button class="gear"><i class="fas fa-cog"></i></button>
+          </div>
+        </section>
+
+        <!-- countdown -->
+        <section class="app" id="countdown">
+          <h1>date coutdown</h1>
+          <details class="info">
+            <summary><i class="fas fa-info-circle"></i></summary>
+            <p>
+              Looking forward to a moment? Let's coutdown to it together! <br />
+              Change of mind? Just click the settings icon and set a new date!
+            </p>
+          </details>
+          <p>countdown to...</p>
+          <h2 id="date">January 1, 2023</h2>
+          <div class="coutdown-timer-block">
+            <h2 class="timer" id="date-timer">376 23 12 07</h2>
+            <h3>DAYS HRS MINS SECS</h3>
+          </div>
+          <button class="gear"><i class="fas fa-cog"></i></button>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <p>This site uses 🍪 to remember stuff!</p>
+      <p>Created By <strong>Shubham Shukla</strong></p>
+      <p>Last Updated <strong>Jan.7.2022</strong></p>
+      <a href="./contact-me.html" class="default-button"
+        ><i class="fas fa-user"></i> CONTACT ME</a
+      >
+    </footer>
+  </body>
+</html>

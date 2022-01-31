@@ -1,0 +1,78 @@
+/***************UNIVERSAL*****************/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+i {
+  pointer-events: none;
+}
+
+/***************GENERAL*****************/
+.left-right {
+  max-width: 50%;
+  width: 50%;
+  height: 100vh;
+  float: left;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.app,
+.home {
+  height: 100vh;
+  min-width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/***************RELAXATION MODE*****************/
+.relax {
+  background: #c26767;
+}
+
+#rps {
+  background: #92a1c9;
+}
+
+#cat-jump {
+  background: #49435e;
+}
+
+#mine {
+  background: #879789;
+}
+
+/***************FOCUS MODE*****************/
+.focus {
+  background: #2e2e2e;
+}
+
+#todo {
+  background: #fffaea;
+}
+
+#pomodoro {
+  background: #ffad8e;
+}
+
+#countdown {
+  background: #fedc8d;
+}
+/*# sourceMappingURL=styles.css.map */
