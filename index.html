@@ -33,24 +33,24 @@
         <section class="home relax">
           <h2>Relaxation Mode</h2>
           <div class="app-icons-line">
-            <div class="app-button-box">
+            <div class="app-button">
               <a href="#rps" class="white-circle">
                 <img
-                  src="./images/rock-paper-scissors.png"
+                  src="./images/finals/rps.png"
                   alt="Rock Paper Scissors Icon"
                 />
               </a>
               <h3>rps</h3>
             </div>
-            <div class="app-button-box">
+            <div class="app-button">
               <a href="#cat-jump" class="white-circle">
-                <img src="./images/Cat-07-300x300.png" alt="Cat Jump Icon" />
+                <img src="./images/finals/cat.png" alt="Cat Jump Icon" />
               </a>
               <h3>cat jump</h3>
             </div>
-            <div class="app-button-box">
+            <div class="app-button">
               <a href="#mine" class="white-circle">
-                <img src="./images/grenade.png" alt="Minesweeper Icon" />
+                <img src="./images/finals/mine.png" alt="Minesweeper Icon" />
               </a>
               <h3>minesweeper</h3>
             </div>
@@ -135,7 +135,7 @@
           <div class="rps-stats">
             <p>PC PLAYED: <span id="pc-played">R/P/S</span></p>
             <p>YOU PLAYED: <span id="you-played">R/P/S</span></p>
-            <h2 id="winner-text">X WINS 🏆</h2>
+            <h2 id="winner-text">🏆<br />X WINS</h2>
             <button class="default-button" id="rps-reset">RESET</button>
           </div>
         </section>
@@ -160,9 +160,9 @@
           </div>
           <div class="cat-play-area">
             <i class="fas fa-cat" id="cat"></i>
-            <i class="fas fa-trash-alt"></i>
-            <i class="fas fa-trash-alt"></i>
-            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-trash"></i>
+            <i class="fas fa-trash"></i>
+            <i class="fas fa-trash"></i>
             <hr />
           </div>
           <div class="cat-stats">
@@ -205,19 +205,19 @@
           <div class="app-icons-line">
             <div class="app-button">
               <a href="#todo" class="white-circle">
-                <img src="./images/list.png" alt="todo list Icon" />
+                <img src="./images/finals/list.png" alt="todo list Icon" />
               </a>
               <h3>to-do list</h3>
             </div>
             <div class="app-button">
               <a href="#pomodoro" class="white-circle">
-                <img src="./images/184540.png" alt="Pomodoro Icon" />
+                <img src="./images/finals/tomato.png" alt="Pomodoro Icon" />
               </a>
               <h3>pomodoro</h3>
             </div>
             <div class="app-button">
               <a href="#countdown" class="white-circle">
-                <img src="./images/calendar-icon.png" alt="Countdown Icon" />
+                <img src="./images/finals/cal.png" alt="Countdown Icon" />
               </a>
               <h3>countdown</h3>
             </div>
@@ -241,9 +241,7 @@
           <div class="todo-container">
             <form>
               <input type="text" class="todo-input" />
-              <button class="todo-button" type="submit">
-                <i class="fa fa-plus-square"></i>
-              </button>
+              <button class="todo-button" type="submit">+</button>
               <div class="select">
                 <select name="todos" class="filter-todo">
                   <option value="all">All</option>
@@ -255,18 +253,24 @@
             <ul class="todo-list">
               <li>
                 Add CSS
-                <button><i class="fas fa-check"></i></button>
-                <button><i class="fas fa-trash"></i></button>
+                <div class="list-buttons">
+                  <button><i class="fas fa-check"></i></button
+                  ><button><i class="fas fa-trash"></i></button>
+                </div>
               </li>
               <li>
                 Add JS
-                <button><i class="fas fa-check"></i></button>
-                <button><i class="fas fa-trash"></i></button>
+                <div class="list-buttons">
+                  <button><i class="fas fa-check"></i></button
+                  ><button><i class="fas fa-trash"></i></button>
+                </div>
               </li>
               <li>
                 Clean up
-                <button><i class="fas fa-check"></i></button>
-                <button><i class="fas fa-trash"></i></button>
+                <div class="list-buttons">
+                  <button><i class="fas fa-check"></i></button
+                  ><button><i class="fas fa-trash"></i></button>
+                </div>
               </li>
             </ul>
           </div>
@@ -317,7 +321,7 @@
 
         <!-- countdown -->
         <section class="app" id="countdown">
-          <h1>date coutdown</h1>
+          <h2>date coutdown</h2>
           <details class="info">
             <summary><i class="fas fa-info-circle"></i></summary>
             <p>
@@ -325,7 +329,7 @@
               Change of mind? Just click the settings icon and set a new date!
             </p>
           </details>
-          <p>countdown to...</p>
+          <p><strong>countdown to...</strong></p>
           <h2 id="date">January 1, 2023</h2>
           <div class="coutdown-timer-block">
             <h2 class="timer" id="date-timer">376 23 12 07</h2>
