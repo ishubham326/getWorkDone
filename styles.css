@@ -1,8 +1,4 @@
 /***************UNIVERSAL*****************/
-footer {
-  display: none;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -54,6 +50,7 @@ table {
   font-size: 3rem;
   font-weight: 800;
   border: none;
+  text-decoration: none;
   padding: 0.5rem 2rem;
   border-radius: 2rem;
   color: none;
@@ -67,6 +64,10 @@ table {
 .default-button:hover {
   background-color: #2e2e2e;
   color: white;
+}
+
+.default-button:visited {
+  color: #49435e;
 }
 
 table {
@@ -354,9 +355,16 @@ table td {
 }
 
 #mine h2,
-#mine h3,
-#mine button {
+#mine h3 {
   color: #4a5a4c;
+}
+
+#mine .default-button {
+  color: #4a5a4c;
+}
+
+#mine .default-button:hover {
+  color: white;
 }
 
 .mine-play-area {
@@ -364,6 +372,79 @@ table td {
   height: 40rem;
   background: #4a5a4c;
   margin: 2rem 0;
+  position: relative;
+}
+
+.mine-stats {
+  text-align: center;
+}
+
+.mine-stats p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+#gameover,
+#won {
+  display: none;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #2e2e2ede;
+  width: 40rem;
+  height: 40rem;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#gameover h3,
+#won h3 {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 2.5rem;
+}
+
+#gameover.show,
+#won.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#grid {
+  width: 38rem;
+  height: 38rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#grid TD {
+  line-height: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 0.1rem solid #2e2e2e;
+  background: #d3d3d3;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+}
+
+#grid TD.clicked {
+  background: #2e2e2e;
+  color: white;
+}
+
+#grid TD.mine {
+  background: white;
 }
 
 /***************FOCUS MODE*****************/
@@ -395,7 +476,8 @@ table td {
 }
 
 .todo-container form input:focus {
-  border: solid 0.3rem #8067d8;
+  outline: none;
+  border: solid 0.3rem #86ca75;
 }
 
 .todo-container form button {
@@ -477,8 +559,51 @@ table td {
   color: white;
 }
 
+.todo-list-item {
+  -webkit-animation: appear 0.3s ease-in;
+          animation: appear 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.fall {
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
+  opacity: 0;
+}
+
 #pomodoro {
   background: #ffad8e;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
 .pom-timer-block {
@@ -497,6 +622,8 @@ table td {
   height: 22rem;
   border-radius: 2.5rem;
   margin: 2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .pom-timer-block h2 {
@@ -513,6 +640,7 @@ table td {
 .pom-stats table {
   margin: 5rem 0;
   font-weight: 700;
+  background: white;
 }
 
 .pom-stats table td {
@@ -520,12 +648,86 @@ table td {
   padding: 0.5rem 2rem;
 }
 
-.pom-stats table tr td:first-child {
-  text-align: right;
-}
-
 .pom-stats button:first-child {
   color: #ff875a;
+}
+
+.pomodoro-settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  right: -100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2e2e2edc;
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.pomodoro-settings form {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.6rem;
+  width: 70%;
+  height: 50vh;
+  border-radius: 2.5rem;
+}
+
+.pomodoro-settings form label {
+  margin-bottom: 1rem;
+}
+
+.pomodoro-settings form input {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.pomodoro-settings button {
+  background: #ff875a;
+  color: white;
+}
+
+.pomodoro-settings button:hover {
+  background-color: #2e2e2e;
+}
+
+.settings-show {
+  right: 0%;
+  opacity: 1;
+}
+
+.pomo-break-back {
+  background: #8dbe8b !important;
+}
+
+.pomo-break-block {
+  background: #4b8046;
 }
 
 #countdown {
@@ -574,12 +776,170 @@ table td {
   opacity: 0.2;
 }
 
+/***************FOOTER*****************/
+footer {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+  background: #313131;
+}
+
+footer .default-button {
+  font-size: 2rem;
+}
+
+footer .default-button:hover {
+  background-color: #c26767;
+  color: white;
+}
+
+.contact-body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 85%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #49435e;
+  color: white;
+}
+
+.about-me,
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20rem;
+  padding: 0 10rem;
+}
+
+.about-me h1,
+.about-me h2,
+.contact-form h1,
+.contact-form h2 {
+  font-size: 5rem;
+  padding: 0;
+}
+
+.about-me p,
+.contact-form p {
+  margin: 5rem 0;
+  font-size: 2rem;
+}
+
+.about-me form,
+.contact-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about-me form label,
+.contact-form form label {
+  font-size: 2rem;
+}
+
+.about-me form input,
+.about-me form textarea,
+.contact-form form input,
+.contact-form form textarea {
+  height: 3.5rem;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.about-me form input:focus,
+.about-me form textarea:focus,
+.contact-form form input:focus,
+.contact-form form textarea:focus {
+  outline: none;
+  border: solid 0.3rem #86ca75;
+}
+
+.about-me form textarea,
+.contact-form form textarea {
+  height: 10rem;
+  resize: none;
+}
+
+.about-me form button,
+.contact-form form button {
+  font-size: 2rem;
+}
+
+.about-me form button:hover,
+.contact-form form button:hover {
+  color: #c26767;
+}
+
+.about-me h1 span {
+  background-color: white;
+  color: #2e2e2e;
+}
+
+.social-block {
+  font-size: 4rem;
+}
+
+.social {
+  color: white;
+  margin: 0 2rem 0 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.social:hover {
+  color: #c26767;
+}
+
 @media only screen and (max-width: 1080px) {
   .left-right {
     max-width: 100vw;
     width: 100vw;
     height: 100vh;
     float: none;
+  }
+  .contact-form,
+  .about-me {
+    margin-top: 10rem;
+    padding: 0 2rem;
+  }
+  .contact-form {
+    margin-bottom: 10rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Me</title>
+    <link rel="icon" href="/images/spider.ico" />
+    <!-- Font-Awesome Used for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.min.css"
+      integrity="sha512-QfDd74mlg8afgSqm3Vq2Q65e9b3xMhJB4GZ9OcHDVy1hZ6pqBJPWWnMsKDXM7NINoKqJANNGBuVRIpIJ5dogfA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Open Sans Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
     <!-- Font-Awesome Used for icons -->
     <link
       rel="stylesheet"
@@ -14,63 +31,74 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body>
-    <div class="about-me">
-      <h1>Hi👋 I'm Shubham!</h1>
-      <p>
-        Enjoying the site? Comments? <br />
-        Feel free to get in touch!
-      </p>
-      <a href="https://github.com/ishubham326" target="_blank" class="social"
-        ><i class="fab fa-github"></i
-      ></a>
-      <a
-        href="https://www.linkedin.com/in/ishubham326/"
-        target="_blank"
-        class="social"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-      <a href="mailto:ishubham326@gmail.com" target="_blank" class="social"
-        ><i class="fas fa-envelope"></i
-      ></a>
-    </div>
-    <div class="contact-form">
-      <h2>Write me a message...</h2>
-      <form action="mailto:ishubham326@gmail.com">
-        <label for="name">name</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="What's your name?"
-          required
-        />
+  <body class="contact-body">
+    <div class="contact-me">
+      <div class="about-me">
+        <h1>Hi👋 I'm <span>Shubham</span>!</h1>
+        <p>
+          Enjoying the site? Comments? <br />
+          Feel free to get in touch!
+        </p>
+        <div class="social-block">
+          <a
+            href="https://github.com/ishubham326"
+            target="_blank"
+            class="social"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ishubham326/"
+            target="_blank"
+            class="social"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="mailto:ishubham326@gmail.com" target="_blank" class="social"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h2>Write me a message...</h2>
+        <form action="mailto:ishubham326@gmail.com">
+          <label for="name">name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="What's your name?"
+            required
+          />
 
-        <label for="email">email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="If I need to reply..."
-          required
-        />
+          <label for="email">email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="If I need to reply..."
+            required
+          />
 
-        <label for="msg">message</label>
-        <textarea
-          name="msg"
-          id="msg"
-          placeholder="Thoughts? Ideas? Bug spotted? Want me add something? Write anything but sensitive info here."
-          required
-        ></textarea>
+          <label for="msg">message</label>
+          <textarea
+            name="msg"
+            id="msg"
+            placeholder="Thoughts? Ideas? Bug spotted? Want me add something? Write anything but sensitive info here."
+            required
+          ></textarea>
 
-        <button type="submit"><i class="fas fa-paper-plane"></i> SEND</button>
-      </form>
+          <button type="submit" class="default-button">
+            <i class="fas fa-paper-plane"></i> SEND
+          </button>
+        </form>
+      </div>
     </div>
     <footer>
       <p>This site uses 🍪 to remember stuff!</p>
       <p>Created By <strong>Shubham Shukla</strong></p>
-      <p>Last Updated <strong>Jan.7.2022</strong></p>
-      <a href="./index.html"><i class="fas fa-shoe-prints"></i> HEAD HOME</a>
+      <p>Last Updated <strong>Feb.22.2022</strong></p>
+      <a href="./index.html" class="default-button"
+        ><i class="fas fa-shoe-prints"></i> HEAD HOME</a
+      >
     </footer>
   </body>
 </html>
