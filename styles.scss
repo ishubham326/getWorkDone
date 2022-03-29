@@ -238,6 +238,17 @@ table {
   }
 }
 //catJump
+.coming-soon {
+  background-color: #2e2e2e;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.5;
+  color: white;
+  font-size: 5rem;
+  text-align: center;
+  top: 0;
+}
 #cat-jump {
   background: #49435e;
   h2:first-child {
@@ -247,6 +258,7 @@ table {
   h3 {
     color: #49435e;
   }
+  position: relative;
 }
 .cat-play-area {
   width: 90%;
@@ -282,7 +294,7 @@ table {
   h3 {
     color: #4a5a4c;
   }
-  .default-button {
+  button {
     color: #4a5a4c;
     &:hover {
       color: white;
@@ -511,7 +523,7 @@ table {
     color: #ff875a;
   }
 }
-.pomodoro-settings {
+.settings {
   display: flex;
   position: absolute;
   top: 0;
@@ -532,12 +544,14 @@ table {
     justify-content: center;
     font-size: 1.6rem;
     width: 70%;
-    height: 50vh;
+    height: 60vh;
     border-radius: 2.5rem;
     label {
       margin-bottom: 1rem;
     }
     input {
+      width: 80%;
+      padding: 0.5rem;
       font-size: 1.6rem;
       margin-bottom: 1rem;
       text-align: center;
@@ -551,6 +565,13 @@ table {
     }
   }
 }
+#close-pomodoro-settings {
+  width: 6rem;
+  height: 6rem;
+  padding: none;
+  border-radius: 50%;
+}
+
 .settings-show {
   right: 0%;
   opacity: 1;
@@ -567,16 +588,19 @@ table {
 
   .gear {
     background: #4c50ce;
-    margin: 18rem 0 0 0;
+    margin: 15rem 0 0 0;
     &:hover {
       background: #2e2e2e;
       color: white;
     }
   }
+  p {
+    color: #4c50ce;
+  }
 }
 #date {
   color: #4c50ce;
-  margin: 4rem;
+  margin: 2rem;
 }
 .coutdown-timer-block {
   background: white;
@@ -592,31 +616,64 @@ table {
     font-size: 7rem;
   }
   h3 {
-    text-align: center;
-    word-spacing: 5rem;
+    text-align: right;
+    word-spacing: 4.5rem;
     width: 100%;
     opacity: 0.2;
   }
+}
+#close-countdown-settings {
+  width: 6rem;
+  height: 6rem;
+  padding: none;
+  border-radius: 50%;
+  background: #fedc8d;
+  color: #2e2e2e;
+}
+#update-countdown {
+  background: #fedc8d;
+  color: #2e2e2e;
+}
+#countdown-to {
+  margin: 1rem;
+  background-color: #4c50ce;
+  padding: 0 1rem;
+  color: white;
+}
+.ui-datepicker {
+  font-size: 1.8rem;
 }
 /***************FOOTER*****************/
 footer {
   color: white;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  //text-align: center;
-  padding: 2rem 0;
+  justify-content: space-between;
+  padding: 2rem 2rem;
   background: #313131;
 
   .default-button {
     font-size: 2rem;
+    border-radius: 1.5rem;
     &:hover {
       background-color: #c26767;
       color: white;
     }
   }
+  h3 {
+    text-align: right;
+  }
+  span {
+    font-weight: 100;
+    font-size: 1.6rem;
+  }
 }
-
+.footer-details {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+/***************CONTANT ME PAGE*****************/
 .contact-body {
   height: 100vh;
   display: flex;
@@ -635,9 +692,9 @@ footer {
 .contact-form {
   display: flex;
   flex-direction: column;
-  margin-top: 20rem;
+  margin-top: 15rem;
   padding: 0 10rem;
-
+  margin-bottom: 2rem;
   h1,
   h2 {
     font-size: 5rem;
@@ -713,5 +770,19 @@ footer {
   }
   .contact-form {
     margin-bottom: 10rem;
+  }
+  footer {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    h3 {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+  .footer-details {
+    text-align: center;
+    align-items: center;
   }
 }

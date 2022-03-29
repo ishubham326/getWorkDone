@@ -346,7 +346,7 @@ let resetSessionsBtn = document.querySelector("#reset-session");
 let closePomodoroSettingsBtn = document.querySelector(
   "#close-pomodoro-settings"
 );
-let pomodoroSettingsDisplay = document.querySelector(".pomodoro-settings");
+let pomodoroSettingsDisplay = document.querySelectorAll(".settings")[0];
 let focusPeriodDsiplay = document.querySelector("#focus-period-display");
 let shortBreakDsiplay = document.querySelector("#short-break-display");
 let longBreakDsiplay = document.querySelector("#long-break-display");

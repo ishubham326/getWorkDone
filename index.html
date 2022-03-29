@@ -21,6 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="./jQuery/jquery-ui-1.13.1.custom/jquery-ui-1.13.1.custom/jquery-ui.css"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -141,6 +145,7 @@
 
         <!-- cat jump -->
         <section class="app" id="cat-jump">
+          <div class="coming-soon">Coming soon...</div>
           <h2>cat jump</h2>
           <details class="info">
             <summary><i class="fas fa-info-circle"></i></summary>
@@ -312,7 +317,7 @@
               <i class="fas fa-cog"></i>
             </button>
           </div>
-          <div class="pomodoro-settings">
+          <div class="settings">
             <form class="pomodoro-form">
               <label for="focus-period">Focus Period: </label>
               <input
@@ -375,23 +380,65 @@
             </p>
           </details>
           <p><strong>countdown to...</strong></p>
-          <h2 id="date">January 1, 2023</h2>
+          <h2 id="countdown-to">new years</h2>
           <div class="coutdown-timer-block">
-            <h2 class="timer" id="date-timer">376 23 12 07</h2>
-            <h3>DAYS HRS MINS SECS</h3>
+            <h2 class="timer" id="date-timer">-- -- -- --</h2>
+            <h3>DAYS HOURS MINS SECS</h3>
           </div>
-          <button class="gear"><i class="fas fa-cog"></i></button>
+          <h2 id="date">Sun Jan 1 2023</h2>
+          <button class="gear" id="countdown-settings-button">
+            <i class="fas fa-cog"></i>
+          </button>
+          <div class="settings" id="countdown-settings-menu">
+            <form id="countdown-form" autocomplete="off">
+              <label for="countdown-name">Countdown Name</label>
+              <input
+                name="countdown-name"
+                placeholder="event name..."
+                class="countdown-values"
+              />
+              <label for="date">Date</label>
+              <input
+                name="date"
+                placeholder="countdown to..."
+                id="date-picker"
+                class="countdown-values"
+                required
+              />
+              <button
+                class="default-button"
+                type="submit"
+                id="update-countdown"
+              >
+                Update Countdown
+              </button>
+              <button
+                class="default-button"
+                id="close-countdown-settings"
+                type="button"
+              >
+                X
+              </button>
+            </form>
+          </div>
         </section>
       </section>
     </main>
     <footer>
-      <p>This site uses 🍪 to remember stuff!</p>
-      <p>Created By <strong>Shubham Shukla</strong></p>
-      <p>Last Updated <strong>Mar.19.2022</strong></p>
-      <a href="./contact-me.html" class="default-button"
-        ><i class="fas fa-user"></i> CONTACT ME</a
-      >
+      <div class="footer-details">
+        <p>This site uses 🍪 to remember stuff!</p>
+        <p>Created By <strong>Shubham Shukla</strong></p>
+        <p>Last Updated <strong>Mar.28.2022</strong></p>
+        <a href="./contact-me.html" class="default-button"
+          ><i class="fas fa-user"></i> CONTACT ME</a
+        >
+      </div>
+      <h3>Bored?<br /><span id="activity"></span></h3>
     </footer>
-    <script src="./main.js" type="text/javascript"></script>
+    <script src="./script/main.js" type="text/javascript"></script>
+    <script src="./jQuery/jquery-3.6.0.min.js"></script>
+    <script src="./jQuery/jquery-ui-1.13.1.custom/jquery-ui-1.13.1.custom/jquery-ui.js"></script>
+    <script src="./jQuery/jquery.js"></script>
+    <script src="./script/api.js"></script>
   </body>
 </html>
